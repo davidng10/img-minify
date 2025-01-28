@@ -43,3 +43,11 @@ export const loadImagesAsBuffers = async (
     throw new Error(`Failed to load images: ${err.message}`);
   }
 };
+
+export const bufferToFile = (
+  buffer: Buffer,
+  filename: string,
+  mimeType: string
+): File => {
+  return new File([buffer], filename, { type: mimeType });
+};
