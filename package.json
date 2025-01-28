@@ -1,0 +1,30 @@
+{
+  "name": "img-minify-test",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js --format=esm --packages=external",
+    "start": "node dist/index.js --file-path './files' --output-path './output'",
+    "dev": "tsc && node --experimental-specifier-resolution=node dist/index.js"
+  },
+  "dependencies": {
+    "file-type": "^20.0.0",
+    "imagemin": "^9.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^10.0.0",
+    "imagemin-webp": "^8.0.0",
+    "mime": "^4.0.6",
+    "read-chunk": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/imagemin": "^9.0.1",
+    "@types/imagemin-mozjpeg": "^8.0.4",
+    "@types/imagemin-pngquant": "^8.0.0",
+    "@types/imagemin-webp": "^7.0.3",
+    "@types/node": "^22.10.10",
+    "esbuild": "^0.24.2",
+    "typescript": "^5.0.0"
+  }
+}
