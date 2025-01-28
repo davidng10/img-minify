@@ -1,4 +1,4 @@
-# Project Name
+# Img minify
 
 Simple image compression tool using imagemin
 
